@@ -3,7 +3,7 @@ package page.monad.gamification.challenge;
 import lombok.Value;
 
 @Value
-public class ChallengeSolvedDTO {
+public class ChallengeSolvedEvent {
 
     long attemptId;
     boolean correct;

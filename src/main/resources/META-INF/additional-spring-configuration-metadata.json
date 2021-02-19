@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "amqp.exchage.attempts",
+      "type": "java.lang.String",
+      "description": "Description for amqp.exchage.attempts."
+    },
+    {
+      "name": "amqp.queue.gamification",
+      "type": "java.lang.String",
+      "description": "Description for amqp.queue.gamification."
+    }
+  ] }

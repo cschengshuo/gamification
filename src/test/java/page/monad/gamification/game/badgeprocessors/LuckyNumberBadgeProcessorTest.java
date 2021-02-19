@@ -1,6 +1,6 @@
 package page.monad.gamification.game.badgeprocessors;
 
-import page.monad.gamification.challenge.ChallengeSolvedDTO;
+import page.monad.gamification.challenge.ChallengeSolvedEvent;
 import page.monad.gamification.game.domain.BadgeType;
 import page.monad.gamification.game.domain.ScoreCard;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,7 +25,7 @@ class LuckyNumberBadgeProcessorTest {
         Optional<BadgeType> badgeType = badgeProcessor
                 .processForOptionalBadge(10,
                         List.of(new ScoreCard(1L, 1L)),
-                        new ChallengeSolvedDTO(1L, true, 42, 10, 1L, "John"));
+                        new ChallengeSolvedEvent(1L, true, 42, 10, 1L, "John"));
         assertThat(badgeType).contains(BadgeType.LUCKY_NUMBER);
     }
 
@@ -34,7 +34,7 @@ class LuckyNumberBadgeProcessorTest {
         Optional<BadgeType> badgeType = badgeProcessor
                 .processForOptionalBadge(10,
                         List.of(new ScoreCard(1L, 1L)),
-                        new ChallengeSolvedDTO(1L, true, 43, 10, 1L, "John"));
+                        new ChallengeSolvedEvent(1L, true, 43, 10, 1L, "John"));
         assertThat(badgeType).isEmpty();
     }
 }

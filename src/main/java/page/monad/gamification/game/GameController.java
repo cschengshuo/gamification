@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import lombok.RequiredArgsConstructor;
-import page.monad.gamification.challenge.ChallengeSolvedDTO;
+import page.monad.gamification.challenge.ChallengeSolvedEvent;
 
 @RestController
 @RequestMapping("/attempts")
@@ -15,7 +15,7 @@ public class GameController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
-    void postResult(@RequestBody ChallengeSolvedDTO dto) {
+    void postResult(@RequestBody ChallengeSolvedEvent dto) {
         gameService.newAttemptForUser(dto);
     }
 }
